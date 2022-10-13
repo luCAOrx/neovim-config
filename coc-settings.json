@@ -49,8 +49,11 @@
 
     //-------- Code Spell Checker Configuration --------
 
+    // Enable cSpell to use the chosen dictionary
+    "cSpellExt.enableDictionaries": [ "portuguese-brazilian" ],
+
     // The Language local to use when spell checking. "en" and "en-GB" are currently supported.
-    "cSpell.language": "en,pt-BR",
+    "cSpell.language": "en,pt,pt_BR",
 
     // Enable / Disable the spell checker.
     "cSpell.enabled": true,
@@ -76,5 +79,8 @@
 
     "eslint.autoFixOnSave": true
   }
+
+
+
 
   
