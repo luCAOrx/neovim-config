@@ -28,9 +28,11 @@ set cursorline            " Highlights the line where the cursor is positioned
 set clipboard+=unnamedplus " Enable clipboard sharing between vim and GUI
 set foldmethod=syntax     " Collapses or expands the code block
 set foldlevel=99          " Folds with a level higher than this number will be closed
-set conceallevel=0        " To desable conceal use Vim's standard conceal configuration.
+set conceallevel=0        " To disable conceal use Vim's standard conceal configuration.
 set ttimeoutlen=50
 set showmatch
+set spell
+set spelllang=en_us,pt_br
 filetype on               " Detect and set the file type option and trigger the File Type Event
 filetype plugin on        " Load the plugin file for the file type, if any
 filetype indent on        " Load the indent file for the file type, if any
