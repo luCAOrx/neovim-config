@@ -24,7 +24,9 @@ let g:coc_global_extensions = [
   \ 'coc-explorer', 
   \ 'coc-tsserver', 
   \ 'coc-json', 
-  \ 'coc-eslint'
+  \ 'coc-eslint',
+  \ 'coc-spell-checker',
+  \ 'coc-cspell-dicts'
 \]
 
 " Some servers have issues with backup files, see #649.
