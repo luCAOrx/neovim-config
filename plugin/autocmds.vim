@@ -18,10 +18,6 @@ function! Multiple_cursors_after()
   endif
 endfunction
 
-function! DisableConceallevel()
-  set conceallevel=0
-endfunction
-
 call Multiple_cursors_before()
 call Multiple_cursors_after()
 
@@ -32,9 +28,3 @@ autocmd! VimLeave * mksession!
 
 " Automatically load the session when entering vim
 autocmd! VimEnter * source Session.vim
-
-" Automatically open coc explorer
-" autocmd! VimEnter * CocCommand explorer
-
-" Automatically disable conceallevel
-autocmd! VimEnter * call DisableConceallevel()
