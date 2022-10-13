@@ -50,22 +50,22 @@
     //-------- Code Spell Checker Configuration --------
 
     // The Language local to use when spell checking. "en" and "en-GB" are currently supported.
-    "cSpell.language": "en,pt-BR",
+    //"cSpell.language": "en,pt-BR",
 
     // Enable / Disable the spell checker.
-    "cSpell.enabled": true,
+    //"cSpell.enabled": true,
 
     // Display the spell checker status on the status bar.
-    "cSpell.showStatus": true,
+    //"cSpell.showStatus": true,
 
     // Controls the maximum number of spelling errors per document.
-    "cSpell.maxNumberOfProblems": 100,
+    //"cSpell.maxNumberOfProblems": 100,
 
     // Controls the number of suggestions shown.
-    "cSpell.numSuggestions": 8,
+    //"cSpell.numSuggestions": 8,
 
     // The minimum length of a word before checking it against a dictionary.
-    "cSpell.minWordLength": 4,
+    //"cSpell.minWordLength": 4,
 
     //----------------------------------------------------
 
@@ -76,9 +76,4 @@
 
     "eslint.autoFixOnSave": true
   }
-
-
-
-
-
   
