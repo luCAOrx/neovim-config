@@ -52,11 +52,14 @@ Plug 'mattn/emmet-vim'
 " Nvim ts rainbow """"""""""""""""""""""""""""""""""""""""""
 Plug 'p00f/nvim-ts-rainbow'
 
-" Telescope Nvim
+" Telescope Nvim """"""""""""""""""""""""""""""""""""""""""""
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
-" Nvim colorizer lua
-Plug 'norcalli/nvim-colorizer.lua'
+" Nvim colorizer lua """"""""""""""""""""""""""""""""""""""""
+" Plug 'norcalli/nvim-colorizer.lua'
+
+" Fork Nvim colorizer lua """"""""""""""""""""""""""""""""""""
+Plug 'NvChad/nvim-colorizer.lua'
 
 call plug#end()
