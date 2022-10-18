@@ -38,7 +38,10 @@ Plug 'editorconfig/editorconfig-vim'
 " Plug 'RRethy/vim-hexokinase'
 
 " IndentLine """"""""""""""""""""""""""""""""""""""""""""""
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
+
+" Indent blank line nvim
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Awesome vim colorschemes """"""""""""""""""""""""""""""""
 Plug 'rafi/awesome-vim-colorschemes'
