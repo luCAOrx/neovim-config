@@ -1,20 +1,12 @@
   {
     "languageserver": { },
 
-    "coc.preferences.formatOnSaveFiletypes": [
-      "typescript",
-      "javascript",
-      "javascript.jsx",
-      "typescript.tsx",
-      "typescriptreact",
-      "javascriptreact",
-      "html",
-      "json"
-    ],
-
-    "tsserver.formatOnType": true,
     "tsserver.log": "verbose",
+
+    "coc.preferences.formatOnSave": true,
     "coc.preferences.formatOnType": true,
+    "coc.preferences.floatActions": true,
+    "coc.preferences.useQuickfixForLocations": true,
 
     "json.enable": true,
     "json.validate.enable": true,
@@ -82,6 +74,7 @@
 
     "eslint.autoFixOnSave": true
   }
+
 
 
 
