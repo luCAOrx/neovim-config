@@ -28,3 +28,6 @@ autocmd! VimLeave * mksession!
 
 " Automatically load the session when entering vim
 autocmd! VimEnter * source Session.vim
+
+" Automatically format on save any file 
+" autocmd BufWritePost * call CocActionAsync('format')
