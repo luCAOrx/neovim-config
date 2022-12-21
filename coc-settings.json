@@ -69,6 +69,17 @@
 
     "workspace.workspaceFolderCheckCwd": false,
 
-    "eslint.autoFixOnSave": true
+    "eslint.autoFixOnSave": true,
+
+    // ------------ YAML file configuration ----------
+    "yaml.enable": true,
+    "yaml.completion": true,
+    "yaml.format.enable": true,
+    "yaml.validate": true,
+    "yaml.format.singleQuote": true,
+    "yaml.format.bracketSpacing": true,
+    "yaml.trace.server": "verbose"
+    // ------------------------------------------------
   }
+
   
