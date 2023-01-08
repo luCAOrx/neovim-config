@@ -46,6 +46,9 @@ nmap <silent> <C-q> :q<CR>
 vmap <silent> <C-q> <Esc>:q<CR>
 imap <silent> <C-q> <Esc>:q<CR>
 
+" Launch webview panel markdown-preview-enhanced
+nmap <silent> <F9> :CocCommand markdown-preview-enhanced.openPreview<CR>
+
 " Mark one line or multiple lines
 vmap <S-Up> <Up>
 vmap <S-Down> <Down>
