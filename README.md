@@ -3,6 +3,7 @@
 - [Neovim](https://neovim.io/)
 - [python3-pynvim](https://packages.debian.org/sid/python3-pynvim)
 - [vim-plug](https://github.com/junegunn/vim-plug)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## Configurando
 
