@@ -28,7 +28,11 @@ let g:coc_global_extensions = [
   \ 'coc-spell-checker',
   \ 'coc-cspell-dicts',
   \ '@yaegassy/coc-tailwindcss3',
-  \ 'coc-css'
+  \ 'coc-css',
+  \ 'coc-yaml',
+  \ 'coc-prisma',
+  \ 'coc-markdown-preview-enhanced',
+  \ 'coc-webview'
 \]
 
 " Some servers have issues with backup files, see #649.
