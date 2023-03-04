@@ -14,9 +14,9 @@ vmap <silent> <F6> <Plug>(coc-codeaction-selected)
 imap <silent> <F6> <Plug>(coc-codeaction-selected)
 
  "Coc explorer """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <C-b> <Cmd>CocCommand explorer<CR>
-vmap <C-b> <Cmd>CocCommand explorer<CR>
-imap <C-b> <Cmd>CocCommand explorer<CR>
+nmap <C-e> <Cmd>CocCommand explorer<CR>
+vmap <C-e> <Cmd>CocCommand explorer<CR>
+imap <C-e> <Cmd>CocCommand explorer<CR>
 
 " COC (Conquer of Completion)  """""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:coc_global_extensions = [ 
@@ -139,13 +139,13 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
-" Remap <C-f> and <C-b> for scroll float windows/popups.
+" Remap <C-f> and <C-e> for scroll float windows/popups.
 " if has('nvim-0.4.0') || has('patch-8.2.0750')
   " nnoremap <silent><nowait><expr> <c-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<c-f>"
 
-  " inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+  " inoremap <silent><nowait><expr> <C-e> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
   " vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  " vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  " vnoremap <silent><nowait><expr> <C-e> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-e>"
 " endif
 
 " Use CTRL-S for selections ranges.
