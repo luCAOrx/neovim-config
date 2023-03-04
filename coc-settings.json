@@ -90,6 +90,17 @@
     // The minimum length of a word before checking it against a dictionary.
     "cSpell.minWordLength": 4,
 
+    // Accepted words in the personal dictionary
+    "cSpell.userWords": [
+      "dtos",
+      "grpc",
+      "microservices",
+      "nestjs",
+      "postgresql",
+      "prebuild"
+    ],
+
+
     // -------------------------------------------------------------------------------------------
 
 
@@ -108,11 +119,6 @@
     "yaml.format.singleQuote": true,
     "yaml.format.bracketSpacing": true,
     "yaml.trace.server": "verbose",
-    "cSpell.userWords": [
-      "dtos",
-      "nestjs",
-      "postgresql"
-    ],
 
     // ------------------------------------------------
 
