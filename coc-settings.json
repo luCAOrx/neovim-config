@@ -13,6 +13,7 @@
     "coc.preferences.formatOnType": true,
     "coc.preferences.floatActions": true,
     "coc.preferences.useQuickfixForLocations": true,
+    "css.lint.unknownAtRules": "ignore",
 
     // ------------------------------------------------------
 
@@ -39,10 +40,10 @@
     "explorer.diagnostic.enableSubscriptNumber": true,
     "explorer.debug": true,
     "explorer.keyMappings.global": {
-      "<cr>": [ "wait", "expanded?", "collapse", "expand" ],
+      "cr": "open",
       "<c-s>": "select",
       "<c-u>": "unselect",
-      "<c-f>": "expand:compact|uncompact"
+      "<c-e>": "expand:compact|uncompact"
     },
 
     // ---------------------------------------------------------
