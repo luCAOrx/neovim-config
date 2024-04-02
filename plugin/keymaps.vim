@@ -12,14 +12,14 @@ imap <silent> <C-z> <Esc>:u<CR><Insert>
 imap <silent> <C-y> <Esc>:redo<CR><Insert>
 
 " Save file 
-nmap <silent> <C-s> :w<CR>
-vmap <silent> <C-s> <Esc>:w<CR>
-imap <silent> <C-s> <Esc>:w<CR>
+nmap <silent> <C-s> :w!<CR>
+vmap <silent> <C-s> <Esc>:w!<CR>
+imap <silent> <C-s> <Esc>:w!<CR>
 
 " Save file as
-nmap <F8> :w<space>
-vmap <F8> <Esc>:w<space>
-imap <F8> <Esc>:w<space>
+nmap <F8> :w!<space>
+vmap <F8> <Esc>:w!<space>
+imap <F8> <Esc>:w!<space>
 
 " Open a file
 nmap <C-o> :e<space>
