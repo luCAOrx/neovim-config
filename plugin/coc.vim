@@ -14,9 +14,9 @@ vmap <silent> <F6> <Plug>(coc-codeaction-selected)
 imap <silent> <F6> <Plug>(coc-codeaction-selected)
 
  "Coc explorer """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <C-e> <Cmd>CocCommand explorer<CR>
-vmap <C-e> <Cmd>CocCommand explorer<CR>
-imap <C-e> <Cmd>CocCommand explorer<CR>
+nmap <leader>e <Cmd>CocCommand explorer<CR>
+vmap <leader>e <Cmd>CocCommand explorer<CR>
+imap <leader>e <Cmd>CocCommand explorer<CR>
 
 " COC (Conquer of Completion)  """""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:coc_global_extensions = [ 
@@ -223,7 +223,7 @@ let g:coc_snippet_next = '<tab>'
 
 
 " Coc Explorer """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-:nnoremap <space>e :CocCommand explorer<CR>
+":nnoremap <space>e :CocCommand explorer<CR>
 
 let g:coc_explorer_global_presets = {
 \   '.vim': {
