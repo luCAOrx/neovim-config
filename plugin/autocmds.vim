@@ -21,13 +21,12 @@ endfunction
 call Multiple_cursors_before()
 call Multiple_cursors_after()
 
+autocmd TermEnter term://*toggleterm#*
+      \ tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
+
 autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
-" Automatically save the session when leaving Vim
-autocmd! VimLeave * mksession!
+autocmd VimLeave * mksession! ./Session.vim
 
-" Automatically load the session when entering vim
-autocmd! VimEnter * source Session.vim
-
-" Automatically format on save any file 
-" autocmd BufWritePost * call CocActionAsync('format')
+" Automatically save file
+autocmd InsertLeave * silent write
