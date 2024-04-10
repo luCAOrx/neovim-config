@@ -1,25 +1,26 @@
-" Split navigation
+"Navigate between split windows
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-" Undo changes 
-nmap <silent> <C-z> <Esc>:u<CR>
-imap <silent> <C-z> <Esc>:u<CR><Insert>
+" Undo changes
+nmap <silent> <C-z> <Cmd>u<CR>
+imap <silent> <C-z> <Cmd>u<CR>
 
-" Redo changes 
-imap <silent> <C-y> <Esc>:redo<CR><Insert>
+" Redo changes
+nmap <silent> <C-y> <Cmd>redo<CR>
+imap <silent> <C-y> <Cmd>redo<CR>
 
-" Save file 
+" Save file
 nmap <silent> <C-s> :w!<CR>
 vmap <silent> <C-s> <Esc>:w!<CR>
 imap <silent> <C-s> <Esc>:w!<CR>
 
 " Save file as
-nmap <F8> :w!<space>
-vmap <F8> <Esc>:w!<space>
-imap <F8> <Esc>:w!<space>
+nmap <C-S-s> :w!<space>
+vmap <C-S-s> <Esc>:w!<space>
+imap <C-S-s> <Esc>:w!<space>
 
 " Open a file
 nmap <C-o> :e<space>
@@ -30,30 +31,31 @@ imap <C-o> <Esc>:e<space>
 imap <F5> <Esc>:%s/<c-r><c-w>/newValue/g
 
 " Change word or line to uppercase
-imap <F3> <Esc>gUU<Insert>
+vmap <F3> <Esc>gUU
+imap <F3> <Esc>gUU
 
 " Change word or line to lowercase
-imap <F4> <Esc>guu<Insert>
+vmap <F4> <Esc>guu
+imap <F4> <Esc>guu
 
-" Comment a line with //
-imap <F1> <Esc>gcc<Insert>
+" Comment 1 line
+imap <F1> <Esc>gcc
+vmap <F1> <Esc>gcc
 
-" Comment a block of line with //
+" Comment multiple lines
+imap <F2> <Esc>gc
 vmap <F2> gc
 
 " Quit editor
 nmap <silent> <C-q> :q<CR>
-vmap <silent> <C-q> <Esc>:q<CR>
-imap <silent> <C-q> <Esc>:q<CR>
+
+" Launch Nvim Tree
+nmap <M-b> <Cmd>NvimTreeToggle<CR>
 
 " Launch webview panel markdown-preview-enhanced
-nmap <silent> <F9> :CocCommand markdown-preview-enhanced.openPreview<CR>
+nmap <silent> <F9> <Cmd>MarkdownPreview<CR>
 
 " Mark one line or multiple lines
-vmap <S-Up> <Up>
-vmap <S-Down> <Down>
-vmap <S-Left> <Left>
-vmap <S-Right> <Right>
 imap <S-Up> <Esc>v<Up>
 imap <S-Down> <Esc>v<Down>
 imap <S-Left> <Esc>v<Left>
@@ -63,7 +65,7 @@ imap <S-Right> <Esc>v<Right>
 vmap <Tab> >v
 imap <Tab> <Esc>>><Insert>
 
-" Indent to left 
+" Indent to left
 vmap <S-Tab> <v
 imap <S-Tab> <Esc><<<Insert>
 
@@ -74,7 +76,7 @@ imap <C-f> <Esc>/
 
 " Cut
 imap <C-x> <Esc>c<End><Insert>
-vmap <C-x> c<End><Insert>
+vmap <C-x> c<End>
 
 " Copy
 nmap <C-c> "+y
@@ -85,8 +87,7 @@ imap <C-c> <Esc>"+y<CR><Insert>
 imap <C-v> <Esc>"+p<Insert>
 
 " Collapse a code block
-nmap <space> za
-vmap <space> <Esc>za
+nmap <C-[> <Esc>za
 
 " Select all
 vmap <C-a> <Esc>ggVG
@@ -97,52 +98,28 @@ inoremap <silent> <C-S-down> <Esc>:m .+1<CR>==gi
 vnoremap <silent> <C-S-down> :m '>+1<CR>gv=gv
 vnoremap <silent> <C-S-up> :m '<-2<CR>gv=gv
 
-" Create a emmet
-imap <F7> <Esc>:Emmet<space>
-
 " Adding an empty line below, above and below with insert
 nmap op o<Esc>k
 nmap oi O<Esc>j
 nmap oo A<CR>
 
-" Create a tab
-nmap <silent> te :tabe<CR>
-vmap <silent> te <Esc>:tabe<CR>
+" Create a new buffer
+nmap <silent> <M-t> :tabe<CR>
 
 " Navigate between buffers
-nmap <silent> ty :bn<CR>
-vmap <silent> ty <Esc>:bn<CR>
+nmap <silent> <M-Down> :bn<CR>
+nmap <silent> <M-Up> :bp<CR>
 
-nmap <silent> tr :bp<CR>
-vmap <silent> tr <Esc>:bp<CR>
-
-nmap <silent> <C-PageDown> :bn<CR>
-vmap <silent> <C-PageDown> <Esc>:bn<CR>
-imap <silent> <C-PageDown> <Esc>:bn<CR>
-
-nmap <silent> <C-PageUp> :bp<CR>
-vmap <silent> <C-PageUp> <Esc>:bp<CR>
-imap <silent> <C-PageUp> <Esc>:bp<CR>
-
-" Delete a buffer
-nmap <silent> td :bd<CR>
-vmap <silent> td <Esc>:bd<CR>
-" nmap <silent> <C-w> :bd<CR>
-" vmap <silent> <C-w> <Esc>:bd<CR>
+" Close current buffer
+nmap <silent> <M-w> :bd<CR>
 
 " Create splits
-nmap <silent> th :split<CR>
-vmap <silent> th <Esc>:split<CR>
-
-nmap <silent> tv :vsplit<CR>
-vmap <silent> tv <Esc>:vsplit<CR>
-
-" Open a new buffer with a empty file
-nmap <silent> <C-n> :new<CR>
-vmap <silent> <C-n> <Esc>:new<CR>
-imap <silent> <C-n> <Esc>:new<CR>
+nmap <silent> <M-h> :split<CR>
+nmap <silent> <M-v> :vsplit<CR>
 
 " Open terminal
-nmap <silent> <C-t> :terminal<CR>
-vmap <silent> <C-t> <Esc>:terminal<CR>
-imap <silent> <C-t> <Esc>:terminal<CR>
+nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
+
+" Re ordering buffers
+nnoremap <M-S-Up> <Cmd>BufferLineMoveNext<CR>
+nnoremap <M-S-Down> <Cmd>BufferLineMovePrev<CR>
