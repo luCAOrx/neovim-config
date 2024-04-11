@@ -96,7 +96,7 @@ wk.register({
 
   e = { "<cmd>NvimTreeToggle<cr>", "Open file explorer" },
 
-  a = { "<cmd>MarkdownPreview<cr>", "Open markdown preview" },
+  a = { "<cmd>MarkdownPreview<cr>", "Open markdown preview (Only in markdown files)" },
 
   p = {
     name = "Plug pakage Manager",
@@ -110,7 +110,7 @@ wk.register({
   t = { "<cmd>ToggleTerm<cr>", "Open terminal" },
 
   m = {
-    name = "Mason LSP package manafer",
+    name = "Mason LSP package manager",
     o = { "<cmd>Mason<cr>", "Open" },
     i = { "<cmd>MasonInstall<cr>", "Install" },
     u = { "<cmd>MasonUpdate<cr>", "Update" },
