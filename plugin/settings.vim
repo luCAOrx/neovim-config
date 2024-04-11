@@ -28,8 +28,18 @@ set cursorline            " Highlights the line where the cursor is positioned
 set clipboard+=unnamedplus " Enable clipboard sharing between vim and GUI
 set foldmethod=syntax     " Collapses or expands the code block
 set foldlevel=99          " Folds with a level higher than this number will be closed
-set ttimeoutlen=50
-set showmatch
+set ttimeoutlen=0         " Time in milliseconds to wait for a mapped sequence to complete.
+set showmatch             " When a bracket is inserted, briefly jump to the matching one.
+set foldmethod=manual     " The kind of folding used for the current window.
+set foldexpr=''           " The expression used for when 'foldmethod' is "expr".
+set swapfile              " Use a swapfile for the buffer.
+set wrap                  " This option changes how text is displayed.
+set guifont='monospace:h17' " This is a list of fonts which will be used for the GUI version of Vim.
+set hlsearch              " When there is a previous search pattern, highlight all its matches.
+set undofile              " Return the name of the undo file that would be used for a file with name {name} when writing.
+set statusline+=%{get(b:,'gitsigns_status','')} " When non-empty, this option determines the content of the status line.
+set spell spelllang=en_us,pt_br " This command switches on spell checking
+
 filetype on               " Detect and set the file type option and trigger the File Type Event
 filetype plugin on        " Load the plugin file for the file type, if any
 filetype indent on        " Load the indent file for the file type, if any
