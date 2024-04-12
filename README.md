@@ -1,56 +1,47 @@
-## Pré requisitos
+<h1 align="center">Neovim simple config</h1>
+
+<div align="center">
+    <img src=".github/assets/image-1.jpg" width="400" alt="Example image"/>
+    <img src=".github/assets/image-2.jpg" width="400" alt="Example image"/>
+    <img src=".github/assets/image-3.jpg" width="400" alt="Example image"/>
+    <img src=".github/assets/image-4.jpg" width="400" alt="Example image"/>
+    <img src=".github/assets/image-5.jpg" width="400" alt="Example image"/>
+    <img src=".github/assets/image-6.jpg" width="400" alt="Example image"/>
+</div>
+
+## Prerequisites
 
 - [Neovim](https://neovim.io/)
 - [python3-pynvim](https://packages.debian.org/sid/python3-pynvim)
 - [vim-plug](https://github.com/junegunn/vim-plug)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 
-## Configurando
+## Getting started
 
-- Na sua home entre no diretório nvim usando o comando:
-``` sh
-cd ~/.config/nvim
-```
-se por acaso esse diretório não existir, crie-o usando o comando:
-``` sh
-mkdir ~/.config/nvim
-```
+- On your home directory, enter the nvim directory using the command: `cd ~/.config/nvim`,
+if this directory does not exist, create it using the command: `mkdir ~/.config/nvim`
 
-- Clone o repositório para o diretório `~/.config/nvim`
-e mova todos os arquivos para o diretório nvim com o comando:
+- Clone the repository to the directory `~/.config/nvim`, move all contents to the nvim directory and
+copy font to the directory `~/.fonts` with the command:
 ```sh
-mv ~/.config/nvim/neovim-config/* ~/.config/nvim
-```
-depois pode apagar o diretório `neovim-config` com o comando:
-``` sh
-rmdir ~/.config/nvim/neovim-config
+cd ~/.config/nvim && git clone https://github.com/luCAOrx/neovim-config && mv ~/.config/nvim/neovim-config/* ~/.config/nvim && rmdir ~/.config/nvim/neovim-config && cp -vr ~/.config/nvim/fonts/* ~/.fonts
 ```
 
-- Copie todas as fontes para a o diretório `~/.fonts` com o comando:
-``` sh
-cp -vr ~/.config/nvim/fonts/* ~/.fonts
-```
-**as fontes utilizadas nesta configuração são a: `JetBrainsMonoNerdFontMonoRegular`, os glifos(ícones)
-vão aparecer quando a fonte for selecionada, se por acaso for utilizar outras fontes,
-utilize fontes mono espaçadas para que os glifos(ícones) apareçam
-corretamente, caso contrário os glifos(ícones) vão ficar cortados pela metade.** As fontes estão
-disponíveis [aqui]('https://www.nerdfonts.com/font-downloads').
+:warning: **The font used in this configuration is: `JetBrainsMonoNerdFontMonoRegular`, the glyphs(icons)
+will appear when the font is selected, if you choose to use another font,
+use a monospace font so that the glyphs(icons) appear
+correctly, otherwise the glyphs(icons) will be cut in half.** Fonts are
+available [here]('https://www.nerdfonts.com/font-downloads') and the glyphs(icons) are
+available [here]('https://www.nerdfonts.com/cheat-sheet').
 
-- Abra o Neovim com o comando:
-``` sh
-nvim
-```
+- Open Neovim with the command: `nvim`
 
-- Instale os plugins com o comando:
-``` sh
-:PlugInstall
-```
-feche o Neovim e o reabra
+- Install the plugins with the command: `:PlugInstall`, close Neovim and reopen it.
 
-Um tela abrirá instalando os LSP(Language Server Protocol)s definidos no
-parâmetro 'ensure_installed' da função 'require("mason").setup({})'
-no arquivo [mason.lua]('~/.config/nvim/plug/mason.lua')
-feche o Neovim e o reabra, feito tudo isso, está pronto para usar.
+A screen will open installing the LSP(Language Server Protocol)s defined in the
+parameter 'ensure_installed' of function 'require(mason).setup({})'
+in the file [mason.lua]('./plugin/mason.lua') close Neovim and reopen it, once all
+this is done, it is ready to use.
 
-Caso queira saber quais são as teclas de atalho clique na tecla `\` e espere 2 segundos,
-um painel abrirá com as teclas mapeadas.
+If you want to know what the shortcut keys are, click on the key
+`\` and wait 2 seconds, a panel will open with the mapped keys.
