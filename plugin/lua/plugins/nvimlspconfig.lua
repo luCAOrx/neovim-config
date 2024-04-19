@@ -21,18 +21,35 @@ local servers = {
 for _, server in ipairs(servers) do
   if server == 'lua_ls' then
     lspconfig[server].setup({
+    capabilities = capabilities,
     settings = {
       Lua = {
         completion = {
           callSnippet = "Replace"
-        }
+        },
+        diagnostics = {
+          globals = { "vim" },
+        },
       }
     }
   })
   else
     lspconfig[server].setup {
       -- on_attach = my_custom_on_attach,
-      capabilities = capabilities
+      capabilities = capabilities,
+      vim.api.nvim_create_autocmd("CursorHold", {
+        callback = function()
+          local opts = {
+            focusable = false,
+            close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+            border = 'rounded',
+            source = 'always',
+            prefix = ' ',
+           scope = 'cursor'
+          }
+          vim.diagnostic.open_float(nil, opts)
+        end
+      })
     }
   end
 end
@@ -65,12 +82,13 @@ local kind_icons = {
   Struct = "",
   Event = "",
   Operator = "󰆕",
-  TypeParameter = "󰅲"
+  TypeParameter = "󰅲",
+  Calc = "󰃬",
 }
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
-cmp.setup {
+cmp.setup ({
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
@@ -108,6 +126,10 @@ cmp.setup {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = "calc" },
+    { name = 'buffer' },
+    { name = 'path' },
+    { name = "nvim_lua" },
+    { name = "html" }
   },
   formatting = {
     format = function(entry, vim_item)
@@ -119,18 +141,28 @@ cmp.setup {
         nvim_lsp = "[LSP]",
         luasnip = "[LuaSnip]",
         nvim_lua = "[Lua]",
+        calc = "[Calc]",
         latex_symbols = "[LaTeX]",
       })[entry.source.name]
       return vim_item
     end
   },
-}
+})
+
+cmp.setup.cmdline('/', {
+  view = {
+    entries = {name = 'wildmenu', separator = '|' }
+  },
+})
+
+vim.cmd [[
+  set completeopt=menuone,noinsert,noselect
+  highlight! default link CmpItemKind CmpItemMenuDefault
+]]
 
 lspconfig.bashls.setup {}
 
-lspconfig.cssls.setup {
-  capabilities = capabilities
-}
+lspconfig.cssls.setup {}
 
 lspconfig.dockerls.setup {}
 
@@ -140,9 +172,7 @@ lspconfig.eslint.setup({})
 
 lspconfig.html.setup {}
 
-lspconfig.jsonls.setup {
-  capabilities = capabilities
-}
+lspconfig.jsonls.setup {}
 
 lspconfig.lua_ls.setup {}
 
@@ -150,21 +180,7 @@ lspconfig.prismals.setup {}
 
 lspconfig.tailwindcss.setup {}
 
-lspconfig.tsserver.setup {
-  vim.api.nvim_create_autocmd("CursorHold", {
-    callback = function()
-      local opts = {
-        focusable = false,
-        close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
-        border = 'rounded',
-        source = 'always',
-        prefix = ' ',
-       scope = 'cursor'
-      }
-      vim.diagnostic.open_float(nil, opts)
-    end
-  })
-}
+lspconfig.tsserver.setup {}
 
 lspconfig.vimls.setup {}
 
