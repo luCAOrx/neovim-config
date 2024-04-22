@@ -38,7 +38,7 @@ set guifont='monospace:h17' " This is a list of fonts which will be used for the
 set hlsearch              " When there is a previous search pattern, highlight all its matches.
 set undofile              " Return the name of the undo file that would be used for a file with name {name} when writing.
 set statusline+=%{get(b:,'gitsigns_status','')} " When non-empty, this option determines the content of the status line.
-set spell spelllang=en_us,pt_br " This command switches on spell checking
+" set spell spelllang=en_us,pt_br " This command switches on spell checking
 
 let g:conceallevel = 0
 let g:indentLine_setConceal = 0
