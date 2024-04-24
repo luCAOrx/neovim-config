@@ -75,3 +75,5 @@ spelllang
 spelllang
 spelllang
 lspconfig
+nvim_create_autocmd
+nvim_create_autocmd
