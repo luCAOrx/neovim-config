@@ -161,25 +161,22 @@ wk.register({
 
   u = {
     name = "Utils",
-    b = { "op", "Add empty line bellow" },
-    a = { "oi", "Add empty line above" },
-    e = { "oo", "Add empty line above in isert mode" },
-    ["<C-up>"] = "Move selected line to up",
-    ["<C-down>"] = "Move selected line to down",
+    ["op"] = { "Add Empty line Below" },
+    ["oi"] = { "Add Empty line Above" },
+    ["oo"] = { "Add Empty line Above in Inser Mode" },
     ["<C-S-up>"] = "Move selected multiple lines to up",
     ["<C-S-down>"] = "Move selected multiple lines to down",
     ["<C-a>"] = "Select all lines" ,
-    c = { "za", "Collapse a code block" },
+    ["za"] = { "Collapse a code block" },
     ["<C-c>"] = "Copy",
+    ["<u>"] = { "Switch Word Lowercase [Visual Mode]" },
+    ["<U>"] = { "Switch Word Uppercase [Visual Mode]" },
     ["<C-p>"] = "Paste",
     ["<C-x>"] = "Cut",
     ["<C-f>"] = "Search a word in current buffer",
     ["<Tab>"] = "Indent to right",
     ["<S-Tab>"] = "Indent to right",
-    ["F1"] = "Coment a line",
-    ["F2"] = "Coment multiple lines" ,
-    ["F3"] = "Change text to upper case",
-    ["F4"] = "Change text to lower case",
+    c = "Coment Line [Visual Mode]",
     ["<C-o>"] = "Open a file",
     ["<C-S-s>"] = "Save file as",
     ["<C-s>"] = "Save file",
@@ -190,9 +187,13 @@ wk.register({
     ["<C-k>"] = "Navigate between buffers to up",
     ["<C-j>"] = "Navigate between buffers to down",
     ["<C-d>"] = "Find word or subword under",
+    ["<C-n>"] = "Multiple Cursors Select Next Word",
+    ["<C-Down>"] = "Multiple Cursors Select Next Word Bellow",
+    ["<C-Up>"] = "Multiple Cursors Select Next Word Above"
   },
 
-  q = { "<cmd>wq<cr>", "Quit" }
+  q = { "<cmd>q<cr>", "Quit" },
+
 }, {
   mode = "n",       -- NORMAL mode
   prefix = "<leader>",
