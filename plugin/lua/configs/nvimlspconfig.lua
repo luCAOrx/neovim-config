@@ -40,9 +40,6 @@ for _, server in ipairs(servers) do
 	end
 end
 
-vim.opt.spell = true
-vim.opt.spelllang = { "en_us", "pt_br" }
-
 lspconfig.bashls.setup({})
 
 lspconfig.cssls.setup({
