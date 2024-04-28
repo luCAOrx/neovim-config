@@ -18,30 +18,35 @@
 
 ## Getting started
 
-- On your home directory, enter the nvim directory using the command: `cd ~/.config/nvim`,
-if this directory does not exist, create it using the command: `mkdir ~/.config/nvim`
+- Remove all neovim settings so as not to conflict with the new configuration using the command:
 
-- Clone the repository to the directory `~/.config/nvim`, move all contents to the nvim directory and
-copy font to the directory `~/.fonts` with the command:
 ```sh
-cd ~/.config/nvim && git clone https://github.com/luCAOrx/neovim-config && mv ~/.config/nvim/neovim-config/* ~/.config/nvim && rmdir ~/.config/nvim/neovim-config && cp -vr ~/.config/nvim/fonts/* ~/.fonts
+rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim
 ```
 
-:warning: **The font used in this configuration is: `JetBrainsMonoNerdFontMonoRegular`, the glyphs(icons)
-will appear when the font is selected, if you choose to use another font,
-use a monospace font so that the glyphs(icons) appear
-correctly, otherwise the glyphs(icons) will be cut in half.** Fonts are
-available [here]('https://www.nerdfonts.com/font-downloads') and the glyphs(icons) are
-available [here]('https://www.nerdfonts.com/cheat-sheet').
+- Clone the repository to the directory `~/.config/nvim`, copy font to the directory
+  `~/.fonts` and run nvim with the command:
 
-- Open Neovim with the command: `nvim`
+```sh
+git clone https://github.com/luCAOrx/neovim-config ~/.config/nvim && cp ~/.config/nvim/fonts/JetBrainsMonoNerdFontMono-Regular.ttf ~/.fonts/ && nvim
+```
 
-- Install the plugins with the command: `:PlugInstall`, close Neovim and reopen it.
+- Set Jet Brains Mono Nerd Font Mono Regular in your system config and terminal config.
 
-A screen will open installing the LSP(Language Server Protocol)s defined in the
-parameter 'ensure_installed' of function 'require(mason).setup({})'
-in the file [mason.lua]('./plugin/mason.lua') close Neovim and reopen it, once all
-this is done, it is ready to use.
+:warning: Warning
 
-If you want to know what the shortcut keys are, click on the key
-`\` and wait 2 seconds, a panel will open with the mapped keys.
+> \*The font used in this configuration is: `JetBrainsMonoNerdFontMonoRegular`, the glyphs(icons)
+> will appear when the font is selected, if you choose to use another font,
+> use a monospace font so that the glyphs(icons) appear
+> correctly, otherwise the glyphs(icons) will be cut in half.\*\* Fonts are
+> available [here]('https://www.nerdfonts.com/font-downloads') and the glyphs(icons) are
+> available [here]('https://www.nerdfonts.com/cheat-sheet').
+
+- Install the plugins with the command: `:PlugInstall`, close Neovim with command: `:q` and press
+  enter, run the command: `nvim` to reopen it.
+
+A screen will open installing what is defined in the 'masonPackage' list in the file
+[autocmds.lua]('./plugin/lua/autocmds.lua'), close Neovim and reopen it `nvim`, it is ready to use.
+
+If you want to know what the shortcut keys are, click on the key `\`, a panel will open
+with the mapped keys.
