@@ -5,10 +5,18 @@ require("conform").setup({
 		-- Conform will run multiple formatters sequentially
 		go = { "goimports", "gofmt" },
 		-- Use a sub-list to run only the first available formatter
-		javascript = { { "prettierd", "prettier" } },
-		javascriptreact = { { "prettierd", "prettier" } },
-		typescript = { { "prettierd", "prettier" } },
-		typescriptreact = { { "prettierd", "prettier" } },
+		javascript = { "prettier" },
+		javascriptreact = { "prettier" },
+		typescript = { "prettier" },
+		typescriptreact = { "prettier" },
+		yaml = { "yamlfmt" },
+		proto = { "buf" },
+		markdown = { "prettier" },
+		json = { "prettier" },
+		editorconfig = { "editorconfig-checker" },
+		css = { "prettier" },
+		scss = { "prettier" },
+
 		-- You can use a function here to determine the formatters dynamically
 		python = function(bufnr)
 			if require("conform").get_formatter_info("ruff_format", bufnr).available then
@@ -88,9 +96,3 @@ require("conform").setup({
 		end,
 	},
 })
-
--- You can set formatters_by_ft and formatters directly
-require("conform").formatters_by_ft.lua = { "stylua" }
-require("conform").formatters.my_formatter = {
-	command = "my_cmd",
-}
