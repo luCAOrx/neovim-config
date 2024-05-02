@@ -42,11 +42,5 @@ git clone https://github.com/luCAOrx/neovim-config ~/.config/nvim && cp ~/.confi
 > available [here]('https://www.nerdfonts.com/font-downloads') and the glyphs(icons) are
 > available [here]('https://www.nerdfonts.com/cheat-sheet').
 
-- Install the plugins with the command: `:PlugInstall`, close Neovim with command: `:q` and press
-  enter, run the command: `nvim` to reopen it.
-
-A screen will open installing what is defined in the 'masonPackage' list in the file
-[autocmds.lua]('./plugin/lua/autocmds.lua'), close Neovim and reopen it `nvim`, it is ready to use.
-
 If you want to know what the shortcut keys are, click on the key `\`, a panel will open
 with the mapped keys.
