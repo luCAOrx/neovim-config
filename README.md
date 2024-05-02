@@ -38,7 +38,7 @@ git clone https://github.com/luCAOrx/neovim-config ~/.config/nvim && cp ~/.confi
 > \*The font used in this configuration is: `JetBrainsMonoNerdFontMonoRegular`, the glyphs(icons)
 > will appear when the font is selected, if you choose to use another font,
 > use a monospace font so that the glyphs(icons) appear
-> correctly, otherwise the glyphs(icons) will be cut in half.\*\* Fonts are
+> correctly, otherwise the glyphs(icons) will be cut in half. Fonts are
 > available [here]('https://www.nerdfonts.com/font-downloads') and the glyphs(icons) are
 > available [here]('https://www.nerdfonts.com/cheat-sheet').
 
