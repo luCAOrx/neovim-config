@@ -1,12 +1,12 @@
 vim.api.nvim_create_autocmd("CursorHold", {
 	callback = function()
-		function HighlightWordUnderCursor()
-			local currentWord = vim.fn.expand("<cword>")
-
-			vim.api.nvim_command("match Search /\\<" .. currentWord .. "\\>/")
-		end
-
-		HighlightWordUnderCursor()
+		-- function HighlightWordUnderCursor()
+		-- 	local currentWord = vim.fn.expand("<cword>")
+		--
+		-- 	vim.api.nvim_command("match Search /\\<" .. currentWord .. "\\>/")
+		-- end
+		--
+		-- HighlightWordUnderCursor()
 
 		local options = {
 			focusable = false,
