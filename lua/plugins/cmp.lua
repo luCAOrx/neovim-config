@@ -149,7 +149,7 @@ return {
 						vim_item.menu = ({
 							buffer = "[Buffer]",
 							nvim_lsp = "[LSP]",
-							luasnip = "[LuaSnip]",
+							luasnip = "[snippet]",
 							nvim_lua = "[Lua]",
 							path = "[Path]",
 							calc = "[Calculator]",
