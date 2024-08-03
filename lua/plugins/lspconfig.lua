@@ -53,6 +53,20 @@ return {
 
 			lspconfig.cssls.setup({
 				capabilities = capabilities,
+				settings = {
+					css = {
+						validate = true,
+						lint = {
+							unknownAtRules = "ignore",
+						},
+					},
+					scss = {
+						validate = true,
+					},
+					less = {
+						validate = true,
+					},
+				},
 			})
 
 			lspconfig.dockerls.setup({})
@@ -67,13 +81,81 @@ return {
 
 			lspconfig.jsonls.setup({
 				capabilities = capabilities,
+				filetypes = { "json", "jsonc" },
+				settings = {
+					json = {
+						-- Schemas https://www.schemastore.org
+						schemas = {
+							{
+								fileMatch = { "package.json" },
+								url = "https://json.schemastore.org/package.json",
+							},
+							{
+								fileMatch = { "tsconfig*.json" },
+								url = "https://json.schemastore.org/tsconfig.json",
+							},
+							{
+								fileMatch = {
+									".prettierrc",
+									".prettierrc.json",
+									"prettier.config.json",
+								},
+								url = "https://json.schemastore.org/prettierrc.json",
+							},
+							{
+								fileMatch = { ".eslintrc", ".eslintrc.json" },
+								url = "https://json.schemastore.org/eslintrc.json",
+							},
+							{
+								fileMatch = { ".babelrc", ".babelrc.json", "babel.config.json" },
+								url = "https://json.schemastore.org/babelrc.json",
+							},
+							{
+								fileMatch = { "lerna.json" },
+								url = "https://json.schemastore.org/lerna.json",
+							},
+							{
+								fileMatch = { "now.json", "vercel.json" },
+								url = "https://json.schemastore.org/now.json",
+							},
+							{
+								fileMatch = {
+									".stylelintrc",
+									".stylelintrc.json",
+									"stylelint.config.json",
+								},
+								url = "http://json.schemastore.org/stylelintrc.json",
+							},
+						},
+					},
+				},
 			})
 
 			lspconfig.lua_ls.setup({})
 
 			lspconfig.prismals.setup({})
 
-			lspconfig.tailwindcss.setup({})
+			lspconfig.tailwindcss.setup({
+				tailwindCSS = {
+					classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+					includeLanguages = {
+						eelixir = "html-eex",
+						eruby = "erb",
+						htmlangular = "html",
+						templ = "html",
+					},
+					lint = {
+						cssConflict = "warning",
+						invalidApply = "error",
+						invalidConfigPath = "error",
+						invalidScreen = "error",
+						invalidTailwindDirective = "error",
+						invalidVariant = "error",
+						recommendedVariantOrder = "warning",
+					},
+					validate = true,
+				},
+			})
 
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
@@ -89,11 +171,11 @@ return {
 				virtual_text = {
 					prefix = "●", -- Could be '●', '▎', 'x'
 					-- Show source in diagnostics
-					source = "always", -- Or "if_many"
+					source = true, -- Or "if_many"
 				},
 				float = {
 					-- Show source in diagnostics
-					source = "always", -- Or "if_many"
+					source = true, -- Or "if_many"
 				},
 				signs = true,
 				underline = true,
