@@ -21,7 +21,7 @@ return {
 				"lua_ls",
 				"prismals",
 				"tailwindcss",
-				"tsserver",
+				"ts_ls",
 				"vimls",
 				"yamlls",
 			}
@@ -157,7 +157,7 @@ return {
 				},
 			})
 
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
 
