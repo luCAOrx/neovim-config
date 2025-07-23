@@ -159,6 +159,11 @@ return {
 
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
+				settings = {
+					implicitProjectConfiguration = {
+						checkJs = true,
+					},
+				},
 			})
 
 			lspconfig.vimls.setup({})
