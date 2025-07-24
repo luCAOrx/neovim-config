@@ -95,6 +95,10 @@ return {
 								url = "https://json.schemastore.org/tsconfig.json",
 							},
 							{
+								fileMatch = { "jsconfig*.json" },
+								url = "https://json.schemastore.org/jsconfig.json",
+							},
+							{
 								fileMatch = {
 									".prettierrc",
 									".prettierrc.json",
@@ -159,11 +163,6 @@ return {
 
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
-				settings = {
-					implicitProjectConfiguration = {
-						checkJs = true,
-					},
-				},
 			})
 
 			lspconfig.vimls.setup({})
